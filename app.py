@@ -150,14 +150,12 @@ def farmer_panel():
 
             lang = detect_language(user_input)
 
-            # ----- Chat response first -----
+            # Chat response
             chat_reply = chat_response(user_input, lang=lang)
 
-            # If input is greeting/farewell → use chat only
             if any(greet in user_input.lower() for greet in ["hello", "hi", "hey", "bye", "నమస్తే", "హలో", "नमस्ते"]):
                 response = chat_reply
             else:
-                # Try disease detection otherwise
                 disease_match = find_best_match(user_input, lang=lang)
                 if disease_match:
                     symptoms = ", ".join(disease_match['symptoms'].get(lang, []))
@@ -203,6 +201,7 @@ def admin_panel():
     st.subheader(f"Welcome {st.session_state.username}! Role: Admin")
     st.markdown("🛠 **Manage Knowledge Base**")
 
+    # Load KB
     with open(KNOWLEDGE_BASE_FILE, "r", encoding="utf-8") as f:
         kb = json.load(f)
 
@@ -222,24 +221,42 @@ def admin_panel():
                 with open(KNOWLEDGE_BASE_FILE, "w", encoding="utf-8") as f:
                     json.dump(kb, f, ensure_ascii=False, indent=4)
                 st.success(f"✅ New disease '{new_key}' added!")
+                st.experimental_rerun()
     else:
         st.write(f"### Editing: {choice}")
-        for lang in ["EN", "HI", "TE"]:
-            kb["diseases"][choice]["disease"][lang] = st.text_input(f"{lang} - Disease Name", value=kb["diseases"][choice]["disease"].get(lang, ""))
-            kb["diseases"][choice]["symptoms"][lang] = [s.strip() for s in st.text_area(f"{lang} - Symptoms (comma separated)", value=", ".join(kb["diseases"][choice]["symptoms"].get(lang, []))).split(",") if s.strip()]
-            kb["diseases"][choice]["remedies"][lang] = [s.strip() for s in st.text_area(f"{lang} - Remedies (comma separated)", value=", ".join(kb["diseases"][choice]["remedies"].get(lang, []))).split(",") if s.strip()]
-            kb["diseases"][choice]["sample_inputs"][lang] = [s.strip() for s in st.text_area(f"{lang} - Sample Inputs (comma separated)", value=", ".join(kb["diseases"][choice]["sample_inputs"].get(lang, []))).split(",") if s.strip()]
 
+        # --- Edit Fields ---
+        for lang in ["EN", "HI", "TE"]:
+            kb["diseases"][choice]["disease"][lang] = st.text_input(
+                f"{lang} - Disease Name", value=kb["diseases"][choice]["disease"].get(lang, "")
+            )
+            kb["diseases"][choice]["symptoms"][lang] = [s.strip() for s in st.text_area(
+                f"{lang} - Symptoms (comma separated)", 
+                value=", ".join(kb["diseases"][choice]["symptoms"].get(lang, []))
+            ).split(",") if s.strip()]
+            kb["diseases"][choice]["remedies"][lang] = [s.strip() for s in st.text_area(
+                f"{lang} - Remedies (comma separated)", 
+                value=", ".join(kb["diseases"][choice]["remedies"].get(lang, []))
+            ).split(",") if s.strip()]
+            kb["diseases"][choice]["sample_inputs"][lang] = [s.strip() for s in st.text_area(
+                f"{lang} - Sample Inputs (comma separated)", 
+                value=", ".join(kb["diseases"][choice]["sample_inputs"].get(lang, []))
+            ).split(",") if s.strip()]
+
+        # --- Save Changes ---
         if st.button("💾 Save Changes"):
             with open(KNOWLEDGE_BASE_FILE, "w", encoding="utf-8") as f:
                 json.dump(kb, f, ensure_ascii=False, indent=4)
             st.success("✅ Knowledge Base updated successfully!")
 
+        # --- Delete Disease ---
+        st.markdown("---")
         if st.button("🗑 Delete Disease"):
-            del kb["diseases"][choice]
+            kb["diseases"].pop(choice, None)  # Safely remove
             with open(KNOWLEDGE_BASE_FILE, "w", encoding="utf-8") as f:
                 json.dump(kb, f, ensure_ascii=False, indent=4)
             st.success(f"❌ '{choice}' deleted!")
+            st.experimental_rerun()  # Refresh page so selectbox updates
 
 # ---------- MAIN ----------
 if not st.session_state.logged_in:
