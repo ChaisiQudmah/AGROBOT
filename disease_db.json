@@ -1,0 +1,17 @@
+{
+  "Dark concentric spots on leaves": {
+    "en": "This may be early blight. Use fungicides like mancozeb or chlorothalonil. Remove infected leaves.",
+    "hi": "यह प्रारंभिक झुलसा रोग हो सकता है। मैनकोजेब या क्लोरोथालोनिल जैसे कवकनाशी का प्रयोग करें। संक्रमित पत्तियों को हटा दें।",
+    "te": "ఇది ఆరంభ బ్లైట్ కావచ్చు. మాంకోజెబ్ లేదా క్లోరోథాలోనిల్ వంటి ఫంగిసైడ్లను వాడండి. సంక్రమిత ఆకులను తొలగించండి."
+  },
+  "Yellowing of leaves": {
+    "en": "Likely nitrogen deficiency. Apply urea or compost for recovery.",
+    "hi": "यह नाइट्रोजन की कमी हो सकती है। सुधार के लिए यूरिया या कम्पोस्ट डालें।",
+    "te": "ఇది నైట్రోజన్ లోపం కావచ్చు. పునరుద్ధరణ కోసం యూరియా లేదా కంపోస్టు వేయండి."
+  },
+  "Wilting of plant": {
+    "en": "Could be Fusarium wilt. Use resistant varieties and improve soil drainage.",
+    "hi": "यह फ्यूज़ेरियम विल्ट हो सकता है। प्रतिरोधी किस्मों का प्रयोग करें और मिट्टी की जल निकासी सुधारें।",
+    "te": "ఇది ఫ్యూసారియం విల్ట్ కావచ్చు. నిరోధక రకాలను ఉపయోగించండి మరియు మట్టిలో నీటి పారుదల మెరుగుపరచండి."
+  }
+}

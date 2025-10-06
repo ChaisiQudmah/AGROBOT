@@ -1,0 +1,177 @@
+[
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "The leaves are wilted and turning yellow",
+        "response": "Received your message: The leaves are wilted and turning yellow",
+        "timestamp": "2025-10-01T21:53:27.689872"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "ఆకులు వాడిపోతున్నాయి మరియు పసుపు రంగులోకి మారుతున్నాయి\n",
+        "response": "మీ సమస్య గుర్తించబడింది.మేము త్వరలో నివారణలను సూచిస్తాము.",
+        "timestamp": "2025-10-01T22:16:38.651900"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "पत्ते मुरझा रहे हैं और पीले हो रहे हैं\n\n",
+        "response": "आपके मुद्दे पर ध्यान दिया गया है।हम जल्द ही उपचार का सुझाव देंगे।",
+        "timestamp": "2025-10-01T22:17:10.838420"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "The leaves are wilted and turning yellow",
+        "response": "Your issue has been noted. We will suggest remedies soon.",
+        "timestamp": "2025-10-02T11:38:52.123726"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "వాడిపోతున్నాయి మరియు పసుపు రంగులోకి మారుతున్నాయి",
+        "response": "Your issue has been noted. We will suggest remedies soon.",
+        "timestamp": "2025-10-02T11:51:12.518916"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": " The leaves are wilted and turning yellow",
+        "response": "Your issue has been noted. We will suggest remedies soon.",
+        "timestamp": "2025-10-02T11:57:43.865253"
+    },
+    {
+        "username": "farmer2",
+        "role": "farmer",
+        "message": "The leaves are wilted and turning yellow",
+        "response": "Your issue has been noted. We will suggest remedies soon.",
+        "timestamp": "2025-10-02T13:11:41.376303"
+    },
+    {
+        "username": "Chashu",
+        "role": "Farmer",
+        "message": "Dark concentric spots on leaves",
+        "response": "Your issue has been noted. We will suggest remedies soon.",
+        "timestamp": "2025-10-02T16:30:49.153018"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Black lesions on stems",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:18:36.737521"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "ఈతలకు చిన్న నీటి మచ్చలు",
+        "response": "క్షమించండి, నేను వ్యాధిని గుర్తించలేకపోయాను. మరిన్ని వివరాలు లేదా చిత్రం అందించండి.",
+        "timestamp": "2025-10-03T11:18:53.032111"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Yellowing of leaves",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:19:22.441249"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Wilting of plant",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:25:21.488111"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Tomato Yellow Leaf Curl Virus",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:25:51.691320"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "पत्तियों पर छोटे पानी से भरे धब्बे",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:46:01.612260"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Yellowing of leaves",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:46:33.519292"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "I see black spots on tomato leaves",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:47:41.989349"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Wilting of plant",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:48:34.597166"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Wilting of plant",
+        "response": "Sorry, I couldn't identify the disease. Please provide more details or an image.",
+        "timestamp": "2025-10-03T11:49:07.582004"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Yellowing of leaves",
+        "response": "Disease: Bacterial Spot\nSymptoms: Small water-soaked spots on leaves, Leaves turning yellow and wilting, Black lesions on stems\nRemedies: Remove infected leaves, Use copper-based fungicide, Ensure proper spacing for airflow",
+        "timestamp": "2025-10-03T12:18:07.841213"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "The leaves are wilting and yellow",
+        "response": "Disease: Bacterial Spot\nSymptoms: Small water-soaked spots on leaves, Leaves turning yellow and wilting, Black lesions on stems\nRemedies: Remove infected leaves, Use copper-based fungicide, Ensure proper spacing for airflow",
+        "timestamp": "2025-10-03T12:28:55.935210"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Yellowing of leaves",
+        "response": "Sorry, couldn't identify the disease.",
+        "timestamp": "2025-10-03T14:26:46.217535"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "The leaves are wilting and yellow",
+        "response": "Disease: Bacterial Spot\nSymptoms: Small water-soaked spots on leaves, Leaves turning yellow and wilting, Black lesions on stems\nRemedies: Remove infected leaves, Use copper-based fungicide, Ensure proper spacing for airflow",
+        "timestamp": "2025-10-03T14:26:56.510537"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "Tomato Yellow Leaf Curl Virus",
+        "response": "Sorry, could not identify the disease",
+        "timestamp": "2025-10-03T14:32:17.851558"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "The leaves are wilting and yellow",
+        "response": "Disease: Bacterial Spot\nSymptoms: Small water-soaked spots on leaves, Leaves turning yellow and wilting, Black lesions on stems\nRemedies: Remove infected leaves, Use copper-based fungicide, Ensure proper spacing for airflow",
+        "timestamp": "2025-10-03T14:32:27.820524"
+    },
+    {
+        "username": "farmer2",
+        "role": "Farmer",
+        "message": "The leaves are wilting and yellow",
+        "response": "Disease: Bacterial Spot\nSymptoms: Small water-soaked spots on leaves, Leaves turning yellow and wilting, Black lesions on stems\nRemedies: Remove infected leaves, Use copper-based fungicide, Ensure proper spacing for airflow",
+        "timestamp": "2025-10-03T15:20:43.660388"
+    }
+]

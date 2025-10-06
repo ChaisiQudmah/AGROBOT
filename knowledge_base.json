@@ -1,0 +1,75 @@
+{
+  "general": {
+    "EN": ["Sorry, I couldn't identify the disease. Please provide more details or an image."],
+    "HI": ["माफ़ कीजिए, मैं रोग पहचान नहीं पाया। कृपया और जानकारी या छवि दें।"],
+    "TE": ["క్షమించండి, నేను వ్యాధిని గుర్తించలేకపోయాను. దయచేసి మరిన్ని వివరాలు లేదా చిత్రం ఇవ్వండి."]
+  },
+  "diseases": {
+    "Tomato_Bacterial_Spot": {
+      "disease": {
+        "EN": "Bacterial Spot",
+        "HI": "बैक्टीरियल स्पॉट",
+        "TE": "బాక్టీరియల్ స్పాట్"
+      },
+      "symptoms": {
+        "EN": ["Small water-soaked spots on leaves", "Leaves turning yellow and wilting", "Black lesions on stems"],
+        "HI": ["पत्तियों पर छोटे पानी से भरे धब्बे", "पत्तियाँ पीली और मुरझा रही हैं", "तनों पर काले दाग"],
+        "TE": ["ఈతలకు చిన్న నీటి మచ్చలు", "ఎలుగుబంటి ఆకులు పసుపు అవుతున్నాయి మరియు మురిపుగా మారుతున్నాయి", "కాండాలపై నల్లటి మచ్చలు"]
+      },
+      "remedies": {
+        "EN": ["Remove infected leaves", "Use copper-based fungicide", "Ensure proper spacing for airflow"],
+        "HI": ["संक्रमित पत्तियाँ हटाएँ", "तांबे आधारित कवकनाशी का उपयोग करें", "हवा के लिए उचित दूरी सुनिश्चित करें"],
+        "TE": ["సంక్రమిత ఆకులను తొలగించండి", "కాపర్ ఫంగిసైడ్ వాడండి", "గాలి కోసం సరైన అంతరం ఉంచండి"]
+      },
+      "sample_inputs": {
+        "EN": ["The leaves are wilting and yellow", "I see black spots on tomato leaves", "Tomato leaves turning pale with black dots"],
+        "HI": ["पत्ते मुरझा रहे हैं और पीले हो रहे हैं", "टमाटर के पत्तियों पर काले धब्बे हैं", "पत्तियाँ पीली और काले धब्बे दिख रहे हैं"],
+        "TE": ["ఆకులు వాడిపోతున్నాయి మరియు పసుపు రంగులోకి మారుతున్నాయి", "టమోటా ఆకులపై నల్లటి మచ్చలు ఉన్నాయి", "ఆకులు పసుపుగా మారి నల్ల మచ్చలు కనిపిస్తున్నాయి"]
+      }
+    },
+    "Tomato_Early_Blight": {
+      "disease": {
+        "EN": "Early Blight",
+        "HI": "प्रारंभिक ब्लाइट",
+        "TE": "ప్రారంభ బ్లైట్"
+      },
+      "symptoms": {
+        "EN": ["Dark concentric spots on older leaves", "Leaves turning yellow", "Leaf drop in severe cases"],
+        "HI": ["पुरानी पत्तियों पर गहरे गोलाकार धब्बे", "पत्तियाँ पीली हो रही हैं", "गंभीर मामलों में पत्तियाँ झड़ती हैं"],
+        "TE": ["పాత ఆకులపై గాఢ కేంద్రీకృత మచ్చలు", "ఆకులు పసుపుగా మారుతున్నాయి", "గంభీర సందర్భాల్లో ఆకులు పడిపోతాయి"]
+      },
+      "remedies": {
+        "EN": ["Use fungicides like mancozeb or chlorothalonil", "Remove infected leaves"],
+        "HI": ["मैनकोजेब या क्लोरोथालोनिल जैसे कवकनाशी का उपयोग करें", "संक्रमित पत्तियाँ हटाएँ"],
+        "TE": ["మాంకోజెబ్ లేదా క్లోరోథలోనిల్ వంటి ఫంగిసైడ్లు వాడండి", "సంక్రమిత ఆకులను తొలగించండి"]
+      },
+      "sample_inputs": {
+        "EN": ["Dark spots on tomato leaves", "Older leaves turning yellow with spots"],
+        "HI": ["टमाटर की पत्तियों पर गहरे धब्बे", "पुरानी पत्तियाँ धब्बों के साथ पीली हो रही हैं"],
+        "TE": ["టమోటా ఆకులపై గాఢ మచ్చలు", "పాత ఆకులు మచ్చలతో పసుపుగా మారుతున్నాయి"]
+      }
+    },
+    "Healthy_Plant": {
+      "disease": {
+        "EN": "Healthy",
+        "HI": "स्वस्थ",
+        "TE": "ఆరోగ్యవంతం"
+      },
+      "symptoms": {
+        "EN": ["No disease detected"],
+        "HI": ["कोई रोग नहीं"],
+        "TE": ["ఏమైనా రోగం లేదు"]
+      },
+      "remedies": {
+        "EN": ["Maintain normal care"],
+        "HI": ["सामान्य देखभाल बनाए रखें"],
+        "TE": ["సాధారణ జాగ్రత్తలు తీసుకోండి"]
+      },
+      "sample_inputs": {
+        "EN": ["My plant is healthy", "Leaves look fine and green"],
+        "HI": ["मेरा पौधा स्वस्थ है", "पत्तियाँ अच्छी और हरी दिख रही हैं"],
+        "TE": ["నా మొక్క ఆరోగ్యంగా ఉంది", "ఆకులు బాగానే ఆకుపచ్చగా ఉన్నాయి"]
+      }
+    }
+  }
+}
