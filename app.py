@@ -7,20 +7,20 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
-# ---------- FILE PATHS ----------
+#  FILE PATHS
 MODEL_PATH = "models/plant_disease_cnn.h5"
 KNOWLEDGE_BASE_FILE = "knowledge_base.json"
 USERS_FILE = "users.json"
 CHAT_DB_FILE = "chat_database.json"
 
-# ---------- LOAD USERS ----------
+#  LOAD USERS 
 if os.path.exists(USERS_FILE):
     with open(USERS_FILE, "r", encoding="utf-8") as f:
         USERS = json.load(f)
 else:
     USERS = {}
 
-# ---------- LOAD KNOWLEDGE BASE ----------
+#  LOAD KNOWLEDGE BASE
 if os.path.exists(KNOWLEDGE_BASE_FILE):
     with open(KNOWLEDGE_BASE_FILE, "r", encoding="utf-8") as f:
         knowledge_base = json.load(f)
@@ -34,14 +34,14 @@ else:
         }
     }
 
-# ---------- LOAD CHAT DATABASE ----------
+# LOAD CHAT DATABASE 
 if os.path.exists(CHAT_DB_FILE):
     with open(CHAT_DB_FILE, "r", encoding="utf-8") as f:
         chat_db = json.load(f)
 else:
     chat_db = {}
 
-# ---------- LOAD IMAGE MODEL ----------
+# LOAD IMAGE MODEL 
 try:
     if os.path.exists(MODEL_PATH):
         model = load_model(MODEL_PATH, compile=False)
@@ -53,14 +53,14 @@ except Exception:
     model = None
     CLASS_NAMES = []
 
-# ---------- EMBEDDING MODEL ----------
+# EMBEDDING MODEL 
 @st.cache_resource
 def load_embedder():
     return SentenceTransformer('paraphrase-MiniLM-L6-v2', device="cpu")
 
 embedder = load_embedder()
 
-# ---------- LANGUAGE DETECTION ----------
+#  LANGUAGE DETECTION 
 def detect_language(text):
     for char in text:
         if '\u0900' <= char <= '\u097F':  # Hindi
@@ -69,7 +69,7 @@ def detect_language(text):
             return "TE"
     return "EN"
 
-# ---------- DISEASE MATCH ----------
+#  DISEASE MATCH
 def find_best_match(user_input, lang="EN"):
     user_vec = embedder.encode([user_input])
     best_match, best_score = None, -1
@@ -86,7 +86,7 @@ def find_best_match(user_input, lang="EN"):
         return best_match
     return None
 
-# ---------- CHAT RESPONSE ----------
+#  CHAT RESPONSE 
 def chat_response(user_input, lang="EN"):
     user_vec = embedder.encode([user_input])
     best_score, response = -1, None
@@ -104,7 +104,7 @@ def chat_response(user_input, lang="EN"):
     else:
         return chat_db.get("intro", {}).get(lang, ["Hello! How can I help you?"])[0]
 
-# ---------- SESSION STATE ----------
+#  SESSION STATE 
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 if "role" not in st.session_state:
@@ -114,7 +114,7 @@ if "username" not in st.session_state:
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-# ---------- LOGIN ----------
+#  LOGIN 
 def login():
     st.title("🌱 AgroBot Login")
     username = st.text_input("Username")
@@ -129,11 +129,11 @@ def login():
         else:
             st.error("❌ Invalid credentials")
 
-# ---------- FARMER PANEL ----------
+# FARMER PANEL 
 def farmer_panel():
     st.subheader(f"Welcome {st.session_state.username}! Role: Farmer")
 
-    # ----- Chatbot -----
+    # Chatbot 
     st.markdown("### 💬 AgroBot Chat")
     for msg in st.session_state.chat_history:
         if msg["sender"] == "user":
@@ -169,7 +169,7 @@ def farmer_panel():
 
     st.markdown("---")
 
-    # ----- Image-based Disease Detection -----
+    #  Image-based Disease Detection 
     st.subheader("🌿 Image-based Disease Detection")
     uploaded = st.file_uploader("Upload plant image", type=["jpg", "png", "jpeg"], key="image_upload")
 
@@ -196,7 +196,7 @@ def farmer_panel():
         else:
             st.success(f"Prediction: **{disease}** ({confidence:.2f}%)")
 
-# ---------- ADMIN PANEL ----------
+# ADMIN PANEL 
 def admin_panel():
     st.subheader(f"Welcome {st.session_state.username}! Role: Admin")
     st.markdown("🛠 **Manage Knowledge Base**")
@@ -225,7 +225,7 @@ def admin_panel():
     else:
         st.write(f"### Editing: {choice}")
 
-        # --- Edit Fields ---
+        #  Edit Fields
         for lang in ["EN", "HI", "TE"]:
             kb["diseases"][choice]["disease"][lang] = st.text_input(
                 f"{lang} - Disease Name", value=kb["diseases"][choice]["disease"].get(lang, "")
@@ -243,13 +243,13 @@ def admin_panel():
                 value=", ".join(kb["diseases"][choice]["sample_inputs"].get(lang, []))
             ).split(",") if s.strip()]
 
-        # --- Save Changes ---
+        #  Save Changes 
         if st.button("💾 Save Changes"):
             with open(KNOWLEDGE_BASE_FILE, "w", encoding="utf-8") as f:
                 json.dump(kb, f, ensure_ascii=False, indent=4)
             st.success("✅ Knowledge Base updated successfully!")
 
-        # --- Delete Disease ---
+        #  Delete Disease 
         st.markdown("---")
         if st.button("🗑 Delete Disease"):
             kb["diseases"].pop(choice, None)  # Safely remove
@@ -258,7 +258,7 @@ def admin_panel():
             st.success(f"❌ '{choice}' deleted!")
             st.experimental_rerun()  # Refresh page so selectbox updates
 
-# ---------- MAIN ----------
+#  MAIN 
 if not st.session_state.logged_in:
     login()
 else:
@@ -266,3 +266,4 @@ else:
         farmer_panel()
     elif st.session_state.role == "Admin":
         admin_panel()
+
